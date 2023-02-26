@@ -1,7 +1,7 @@
-const { Client } = require('pg'); 
+const mysql = require("mysql2");
 const env = require('dotenv').config();
 
-const client = new Client({
+const connection = mysql.createConnection({
     user: process.env.USER_DB,
     host: process.env.HOST_DB,
     database: process.env.DATABASE_DB,
@@ -9,10 +9,10 @@ const client = new Client({
     port: process.env.PORT_DB,
 });
 
-client.connect(err => {
+connection.connect(err => {
     if (err) throw error;
     
     console.log("Успешно соединено с базой данных");
 });
 
-module.exports = client;
+module.exports = connection;

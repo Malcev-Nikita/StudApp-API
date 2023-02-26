@@ -3,7 +3,7 @@ const app = express();
 const env = require('dotenv').config();
 const bodyParser = require('body-parser');
 const globalRoutes = require('./routes/global.routes')
-const userRoutes = require('./routes/users.routes')
+const StudentsRoutes = require('./routes/students.routes')
 
 
 app.use(bodyParser.json());
@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 
 
 globalRoutes(app);
-userRoutes(app);
+StudentsRoutes(app);
 
 
 const server = app.listen(process.env.PORT_SERVER, (error) => {
