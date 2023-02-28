@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "260d5c9d-510f-4003-b58e-c8372ce977d5",
+		"name": "StudApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25562984"
+	},
+	"item": [
+		{
+			"name": "Select_Shedule_By_Group",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/get_all_items_of_group/?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"get_all_items_of_group",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
