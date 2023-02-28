@@ -32,6 +32,47 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Select_Students_By_Group",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/get_all_students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"get_all_students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Select_All_Call_Shedule",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/get_all_call_schedule",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"get_all_call_schedule"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
