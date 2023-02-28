@@ -1,12 +1,16 @@
-const db = require('../models/db');
+const db = require('../context');
 
 class Schedule_Of_Items {
+
     async CreateStudent(req, res) {
 
     }
 
     async GetAllItemsOfGroup(req, res) {
-        const items = await db.query()
+        const group = req.params.group
+        db.query(`SELECT * FROM Schedule_Of_Items WHERE Id_Group = ${group}`, (error, result, fields) => res.json(result))
+
+        db.end();
     }
 
     async GetStudent(req, res) {
