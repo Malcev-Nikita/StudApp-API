@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "260d5c9d-510f-4003-b58e-c8372ce977d5",
+		"_postman_id": "2fdd42e4-1377-4f92-8401-21a9328c1cae",
 		"name": "StudApp",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "25562984"
@@ -12,22 +12,18 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/get_all_items_of_group/?",
-					"protocol": "http",
+					"raw": "https://a15459-a752.s.d-f.pw/api/get_all_items_of_group/1",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"a15459-a752",
+						"s",
+						"d-f",
+						"pw"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"get_all_items_of_group",
-						""
-					],
-					"query": [
-						{
-							"key": "",
-							"value": null
-						}
+						"1"
 					]
 				}
 			},
@@ -39,12 +35,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/get_all_students/1",
-					"protocol": "http",
+					"raw": "https://a15459-a752.s.d-f.pw/api/get_all_students/1",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"a15459-a752",
+						"s",
+						"d-f",
+						"pw"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"get_all_students",
@@ -60,12 +58,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/get_all_call_schedule",
-					"protocol": "http",
+					"raw": "https://a15459-a752.s.d-f.pw/api/get_all_call_schedule",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"a15459-a752",
+						"s",
+						"d-f",
+						"pw"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"get_all_call_schedule"
