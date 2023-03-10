@@ -2,8 +2,14 @@ const db = require('../context');
 
 class Schedule_Of_Items {
 
-    async CreateStudent(req, res) {
+    async CountSubjectDay(req, res) {
+        const group = req.params.group
+        const request = `SELECT Day_Of_Week, COUNT(*) AS "Count" 
+                            FROM Schedule_Of_Items 
+                                WHERE Id_Group = ${group} 
+                                    GROUP BY Day_Of_Week`
 
+        db.query(request, (error, result, fields) => res.json(result))
     }
 
     async GetAllItemsOfGroup(req, res) {
