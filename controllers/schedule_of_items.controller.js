@@ -6,9 +6,8 @@ class Schedule_Of_Items {
         const group = req.params.group
         const request = `SELECT Day_Of_Week, COUNT(*) AS "Count" 
                             FROM Schedule_Of_Items 
-                                WHERE Id_Group = ${group} 
-                                    GROUP BY Day_Of_Week`
-
+                                WHERE Id_Group = ${group}` 
+                                
         db.query(request, (error, result, fields) => res.json(result))
     }
 
