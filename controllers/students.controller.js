@@ -2,9 +2,15 @@ const db = require('../context');
 
 class Students {
 
-    async GetAllStudents(req, res) {
-        const group = req.params.group
-        db.query(`SELECT * FROM Students WHERE Id_Group = ${group}`, (error, result, fields) => res.json(result))
+    async CheckUser(req, res) {
+        const login = req.params.login
+        const password = req.params.password
+        
+        const request = `SELECT * FROM Users 
+                            WHERE Login = '${login}' AND Password = '${password}'`
+
+                                
+        db.query(request, (error, result, fields) => res.json(result))
     }
 }
 

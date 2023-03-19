@@ -3,6 +3,6 @@ const controller = require('../controllers/students.controller');
 
 const router = new Router();
 
-router.get('/get_all_students/:group', controller.GetAllStudents)
+router.get('/check_user/:login/:password', controller.CheckUser)
 
 module.exports = router;
