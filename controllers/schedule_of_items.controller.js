@@ -18,7 +18,7 @@ class Schedule_Of_Items {
                                     (SELECT Time_Start FROM Сall_Schedule WHERE Id_Call_Schedule = Сall_Schedule.Id) AS 'Time_Start',
                                     (SELECT Time_End FROM Сall_Schedule WHERE Id_Call_Schedule = Сall_Schedule.Id) AS 'Time_End', 
                                     (SELECT Full_Name FROM Users WHERE 
-                                        (SELECT Users_Id FROM Teacher WHERE Teacher_Id = Teacher.Id) = Users.Id) AS 'Teacher', 
+                                    (SELECT Users_Id FROM Teacher WHERE Teacher_Id = Teacher.Id) = Users.Id) AS 'Teacher', 
                                     (SELECT Name FROM Groups WHERE Id_Group = Groups.Id) AS 'Group', 
                                     (SELECT Name FROM Day_Of_Week WHERE Day_Of_Week_Id = Day_Of_Week.Id) AS 'Day_Of_Week', 
                                     Number_Of_Week 
