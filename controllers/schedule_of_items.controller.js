@@ -20,11 +20,11 @@ class Schedule_Of_Items {
                             (SELECT Time_End FROM Сall_Schedule WHERE Call_Schedule_Id = Сall_Schedule.Id) AS 'Time_End', 
                             (SELECT Full_Name FROM Users WHERE 
                             (SELECT Id FROM Users WHERE Teacher_Id = Users.Id) = Users.Id) AS 'Users', 
-                            (SELECT Name FROM Group WHERE Group_Id = Group.Id) AS 'Group', 
+                            (SELECT Name FROM Groups WHERE Group_Id = Groups.Id) AS 'Group', 
                             (SELECT Name FROM Day_Of_Week WHERE Day_Of_Week_Id = Day_Of_Week.Id) AS 'Day_Of_Week', 
                             A_Week_In_A_Row 
                                 FROM Schedule_Of_Items  
-                                            WHERE Id_Group = ${group}`
+                                            WHERE Group_Id = ${group}`
 
         db.query(request, (error, result, fields) => res.json(result))
     }
